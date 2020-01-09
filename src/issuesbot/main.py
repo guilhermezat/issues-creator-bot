@@ -4,8 +4,8 @@ import logging
 import requests
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, ConversationHandler, MessageHandler, Filters
-from .settings import TELEGRAM_BOT_TOKEN, SECRET_KEY, GITLAB_PRIVATE_TOKEN, PROJECT_FILTER
-from .issue import Issue
+from settings import TELEGRAM_BOT_TOKEN, SECRET_KEY, GITLAB_PRIVATE_TOKEN, PROJECT_FILTER
+from issue import Issue
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
