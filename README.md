@@ -4,7 +4,8 @@ Issues Creator Bot is a Telegram bot made for creating issues at Gitlab and crea
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+These instructions will get you a copy of the project up and running on
+your local machine for development and testing purposes.
 See deployment for notes on how to deploy the project on a live system.
 
 ### Pre requisites
@@ -39,6 +40,26 @@ pip install -r requirements.txt
 Now that you're ready to go. Just run the code
 ```
 python src/issuesbot/main.py
+```
+
+## Deployment
+
+You can use the built Docker Image `guilhermezat/issues-creator-bot` or you can create your own image using
+the `Dockerfile`.
+
+For using the Docker Image download the `.env` file, fill it as explained at pre requisites section and run the command
+```
+docker run -it --rm --env-file .env guilhermezat/issues-creator-bot
+```
+
+For building your own Docker Image run
+```
+docker build -t {TAG} .
+```
+Then, run the container
+```
+docker run -it --rm --env-file .env {TAG}
+
 ```
 
 ## Contributing
